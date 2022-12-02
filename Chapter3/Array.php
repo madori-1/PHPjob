@@ -1,6 +1,7 @@
 <?php
 
 
+
 function culc($count)
 {
     $fruits = ["りんご" => "300", "みかん" => "150", "もも" => "3000"];
@@ -9,7 +10,7 @@ function culc($count)
         echo '<br>';
     }
 }
-/*以下、任意の個数を記入*/
-culc(1);
+
+culc(2);
 
 ?>
