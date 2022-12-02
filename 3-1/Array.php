@@ -9,7 +9,7 @@ function culc($count)
         echo '<br>';
     }
 }
-/*以下、任意の個数を記入*/
-culc(1);
+
+culc(2);
 
 ?>
