@@ -1,18 +1,19 @@
 <?php
-
-$num = 0;
-
-for ($i = 0; $i < 101; $i++) {
-    $num = $i;
-    if ($i % 3 == 0 && $i % 5 == 0) {
-        echo "FizzBuzz!!";
-    } elseif ($i % 3 == 0) {
-        echo "Fizz!";
-    } elseif ($i % 5 == 0) {
-        echo "Buzz!";
+    $test_file = "test2.txt";
+    
+    if (is_readable($test_file)) {
+        // 読み込み可能なときの処理
+        // 対象のファイルを開く
+        $fp = fopen($test_file, "r");
+        // 開いたファイルから1行ずつ読み込む
+        while ($line = fgets($fp)) {
+            // 改行コード込みで1行ずつ出力
+            echo $line.'<br>';
+        }
+        // ファイルを閉じる
+        fclose($fp);
     } else {
-        echo $num;
+        // 読み込み不可のときの処理
+        echo "not readable!";
+        exit;
     }
-   echo '<br>';
-}
-?>
